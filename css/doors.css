@@ -1,0 +1,124 @@
+body {
+    display: flex;
+    background-color: burlywood;
+    justify-content: center;
+}
+
+.doors_container {
+    display: flex;
+    justify-content: center;
+    align-items: auto;
+    align-self: center;
+}
+.pes {
+    width:370px;
+    height: auto;
+    position: absolute;
+    top: 100px;
+    left: 780px;
+    z-index: -3;
+    
+    animation: pes 3s linear infinite;
+}
+
+p {
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color:  white;
+    align-self:center;
+    background: black;
+    padding: 5px;
+
+}
+
+p:hover {
+display: none;  
+}
+
+@keyframes  pes {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+.doors  {
+    display: flex;
+    flex-direction: row;
+    transition: 2s;
+    
+    animation: doors 3s linear infinite;
+
+}
+
+
+
+.door_left, .door_right {
+    display: flex;
+    width: 300px;
+    height: 500px;
+    background: orangered;
+    border:solid 5px black;    
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.door_left {
+    transform-origin: 0 50%;
+    background-image: url(../img/texture.jpg);
+}
+
+.door_right {
+    transform-origin: 100% 50%;
+    background-image: url(../img/texture.jpg);
+}
+
+
+.doors:hover .door_left {
+    transform:perspective(300px) rotateY(40deg);
+    transition: 2s;
+}
+
+.doors:hover .door_right {
+    transform:perspective(300px) rotateY(-40deg);
+    transition: 2s;
+}
+
+.right, .left {
+    width: 70px;
+    height: 50px;
+    display: flex;
+    top: 250px;
+
+}
+
+.left {
+    left: 240px;
+    align-self: flex-end;
+}
+
+.right {
+     
+}
+
+.doors:hover .left {
+    transition: 2s;
+    transform: rotate(-0.1turn);
+}
+
+.doors:hover .right {
+    transform: rotate(0.1turn);
+    transition: 2s;
+}
